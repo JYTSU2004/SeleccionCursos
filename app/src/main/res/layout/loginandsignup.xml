@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_intro"
+    android:foregroundTint="#000000">
+
+    <!-->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="192dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/white"
+        android:text="REGISTER"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="545dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="196dp"
+        android:layout_height="57dp"
+        android:backgroundTint="@color/white"
+        android:foregroundTint="@color/white"
+        android:text="LOGIN"
+        android:textColor="@color/black"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="478dp" />
+
+    <TextView
+        android:id="@+id/Txt_welcome"
+        android:layout_width="263dp"
+        android:layout_height="72dp"
+        android:text="@string/welcome"
+        android:textColor="#ffffff"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="231dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/ic_"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="166dp" />
+
+        <!-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

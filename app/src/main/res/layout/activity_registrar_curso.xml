@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Campo de texto para escribir el nombre del curso -->
+    <EditText
+        android:id="@+id/etCurso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del curso"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <!-- Botón para guardar el curso -->
+    <Button
+        android:id="@+id/btnGuardarCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Guardar Curso" />
+
+</LinearLayout>

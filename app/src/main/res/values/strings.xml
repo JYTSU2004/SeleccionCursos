@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Studysphere</string>
+
+    <!--Cursos-->
+    <string name="item_label">Cursos</string>
+    <string name="elija_los_cursos_donde_necesita_ayuda">Elija los cursos donde necesita ayuda:</string>
+    <string name="elija_los_cursos_donde_pueda_ayudar">Elija los cursos donde pueda ayudar:</string>
+
+    <!--Navigation View-->
+    <string name="Item_Inicio">Inicio</string>
+    <string name="Item_Chats">Chats</string>
+    <string name="Item_Premium">Premium</string>
+    <string name="Item_Mis_Anuncios">Favoritos</string>
+    <string name="Item_Cuenta">Cuenta</string>
+
+    <string name="TituloRl">Titulo</string>
+
+    <!--Opciones Inicio Sesion-->
+    <string name="Ingresar_email">Ingresar con email</string>
+    <string name="Ingresar_google">Ingresar con google</string>
+
+    <!--Email-->
+    <string name="Txt_login">Login de usuario</string>
+    <string name="Et_email">Email</string>
+    <string name="Et_password">Password</string>
+    <string name="Btn_ingresar">Ingresar</string>
+    <string name="Txt_no_cuenta">¿No tienes una cuenta?</string>
+    <string name="Txt_registrarme">REGISTRARME</string>
+
+    <!--Registro Email-->
+    <string name="Txt_registro">Registro de usuario</string>
+    <string name="Et_r_password">Repetir contraseña</string>
+    <string name="Btn_registrar">Registrar</string>
+
+    <!--Perfil de Usuario-->
+    <string name="Txt_perfil">Perfil de usuario</string>
+    <string name="Txt_informacion">Información: </string>
+    <string name="Txt_nombres">Nombres: </string>
+    <string name="Tv_nombres">Nombres completos</string>
+    <string name="Txt_email">Email: </string>
+    <string name="Tv_email">email@dominio.com</string>
+    <string name="Txt_nacimiento">Fecha de nac: </string>
+    <string name="Tv_nacimiento">dd/mm/aaaa</string>
+    <string name="Txt_miembro">Miembro desde: </string>
+    <string name="Tv_miembro">dd/mm/aaaa</string>
+    <string name="Txt_telefono">Teléfono: </string>
+    <string name="Tv_telefono">999999999</string>
+    <string name="Txt_estado_cuenta">Estado de cuenta: </string>
+    <string name="Tv_estado_cuenta">No verificado</string>
+    <string name="Txt_premium">Premium:</string>
+    <string name="Tv_premium">No</string>"
+
+    <string name="TxtOpciones">Opciones</string>
+    <string name="Btn_editar_perfil">Editar perfil</string>
+    <string name="Btn_cerrar_sesion">Cerrar Sesión</string>
+
+    <!--Editar Perfil-->
+    <string name="Txt_editar_p">Editar perfil</string>
+    <string name="Et_nombres">Nombres completos</string>
+    <string name="Et_f_nac">Fecha de nac.</string>
+    <string name="Et_telefono">+00</string>
+    <string name="Btn_actualizar">Actualizar</string>
+
+    <!--login and signup-->
+    <string name="Txt_welcome">Welcome</string>
+    <string name="welcome">Welcome</string>
+    <string name="ingrese_su_correo_para_restablecer">Ingrese su correo para Restablecer</string>
+    <string name="solicitud_de_restablecimiento">Solicitud de Restablecimiento</string>
+    <string name="correo_electr_nico">Correo electrónico</string>
+    <string name="Txt_reestablece">Restablecer contraseña</string>
+    <string name="Txt_olvido">¿Olvidaste tu contraseña?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancelar_suscripcion">Cancelar Suscripción</string>
+    <string name="ic_toggle_theme">Cambia de tema:</string>
+    <string name="FABCambiarImg">IMAGEN</string>
+    <string name="c_digo_qr">Código QR</string>
+    <string name="ingresar_con_google">Ingresar con Google</string>
+
+
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="214dp"
+        android:background="@drawable/rounded_black_background">
+
+        <!-- Imagen de perfil del profesor -->
+        <TextView
+            android:id="@+id/tvNombreProfesor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEdadProfesor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNombreProfesor"
+            android:text="Edad"
+            android:layout_marginStart="15dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDescripcionProfesor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEdadProfesor"
+            android:text="Descripción"
+            android:layout_marginStart="15dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvUbicacionProfesor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDescripcionProfesor"
+            android:text="Ubicación"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <!-- MapView de OSMDroid para mostrar la ubicación del profesor -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/tvUbicacionProfesor"
+            android:background="@drawable/rounded_map_background">
+
+            <org.osmdroid.views.MapView
+                android:id="@+id/mapViewProfesor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

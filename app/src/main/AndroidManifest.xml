@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_studysphere"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_studysphere_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SeleccionCursos"
+        tools:targetApi="34">
+        <activity
+            android:name=".Fragmentos.ProfesoresAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Curso.RegistrarCursoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Profesor.RegistrarProfesorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash.IngresoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash.ClosedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash.CorreoSplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Pago.PremiumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Usuario.ResetPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Usuario.EditarPerfil"
+            android:exported="false" />
+        <activity
+            android:name=".Usuario.Registro_email"
+            android:exported="false" />
+        <activity
+            android:name=".Opciones_login.Login_email"
+            android:exported="false" />
+        <activity
+            android:name=".Principal.MainActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="org.osmdroid.tileprovider.constants.OsmDroidConstants"
+            android:value="true" />
+    </application>
+
+</manifest>

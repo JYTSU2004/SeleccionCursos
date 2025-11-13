@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "619568150325",
+    "firebase_url": "https://miappdecursos-default-rtdb.firebaseio.com",
+    "project_id": "miappdecursos",
+    "storage_bucket": "miappdecursos.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619568150325:android:e563da0be6ab7010f73e7c",
+        "android_client_info": {
+          "package_name": "com.edu.seleccioncursos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619568150325-vtuq63am9q2bgdg94c25v9j7k5covvrc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edu.seleccioncursos",
+            "certificate_hash": "a1668f67d06c03e8349cae962707804b4f5377c9"
+          }
+        },
+        {
+          "client_id": "619568150325-afk46m3p9f77ctmqdpsog95pavh4nis0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuuYKXVj783rdZQKq5EJ99SieuQlqh8W4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619568150325-afk46m3p9f77ctmqdpsog95pavh4nis0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

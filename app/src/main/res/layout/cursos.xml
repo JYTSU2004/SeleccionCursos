@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:padding="10dp"
+    tools:context=".Principal.MainActivity">
+
+    <TextView
+        android:id="@+id/TW1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/elija_los_cursos_donde_pueda_ayudar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:startIconDrawable="@drawable/ic_library">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/elija_los_cursos_donde_pueda_ayudar"
+            android:inputType="none"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/TW2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/elija_los_cursos_donde_necesita_ayuda" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Completado"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_margin="16dp"
+        app:startIconDrawable="@drawable/ic_library">
+
+        <AutoCompleteTextView
+            android:id="@+id/Completado1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/elija_los_cursos_donde_necesita_ayuda"
+            android:inputType="none"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_completar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Btn_cerrar_sesion"
+        android:textAllCaps="true" />
+
+</LinearLayout>
