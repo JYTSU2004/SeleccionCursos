@@ -97,6 +97,7 @@ class FragmentInicio : Fragment() {
         ref.orderByChild("curso").equalTo(curso).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
+                    
                     for (profesorSnapshot in snapshot.children) {
                         val nombre = profesorSnapshot.child("nombre").getValue(String::class.java) ?: "Nombre no disponible"
                         val edad = profesorSnapshot.child("edad").getValue(Int::class.java) ?: 0

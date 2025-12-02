@@ -16,6 +16,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.edu.seleccioncursos.Modelos.Profesor
 import com.edu.seleccioncursos.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -143,56 +144,49 @@ class RegistrarProfesorActivity : AppCompatActivity() {
 
     private fun guardarProfesor() {
         val nombre = etNombre.text.toString().trim()
-        val edad = etEdad.text.toString().trim()
+        val edadTexto = etEdad.text.toString().trim()
         val descripcion = etDescripcion.text.toString().trim()
-        val cursoSeleccionado = spinnerCursoRegistrado.selectedItem?.toString()
+        val curso = spinnerCursoRegistrado.selectedItem.toString()
 
-        if (nombre.isEmpty() || edad.isEmpty() || descripcion.isEmpty() || geoPointSeleccionado == null || cursoSeleccionado.isNullOrEmpty()) {
-            Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
+        if (nombre.isEmpty() || edadTexto.isEmpty() || descripcion.isEmpty()) {
+            Toast.makeText(this, "Por favor llena todos los campos", Toast.LENGTH_SHORT).show()
             return
         }
 
-        val progreso = ProgressDialog(this)
-        progreso.setMessage("Guardando profesor...")
-        progreso.show()
+        val edad = edadTexto.toIntOrNull() ?: 0
 
-        val storageRef = FirebaseStorage.getInstance().reference.child("profesores/${firebaseAuth.uid}/${System.currentTimeMillis()}.jpg")
-        storageRef.putFile(imagenUri!!)
-            .addOnSuccessListener { taskSnapshot ->
-                taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
-                    guardarInfoProfesor(nombre, edad.toInt(), descripcion, cursoSeleccionado, uri.toString())
-                    progreso.dismiss()
-                }
-            }
-            .addOnFailureListener { e ->
-                progreso.dismiss()
-                Toast.makeText(this, "Error al subir imagen: ${e.message}", Toast.LENGTH_SHORT).show()
-            }
-    }
+        // Si geoPointSeleccionado tiene datos, usamos esos. Si es null, usamos 0.0
+        val lat = geoPointSeleccionado?.latitude ?: 0.0
+        val lon = geoPointSeleccionado?.longitude ?: 0.0
 
-    private fun guardarInfoProfesor(nombre: String, edad: Int, descripcion: String, curso: String, imagenUrl: String) {
-        val profesorData = hashMapOf(
-            "nombre" to nombre,
-            "edad" to edad,
-            "descripcion" to descripcion,
-            "curso" to curso,
-            "latitud" to geoPointSeleccionado?.latitude,
-            "longitud" to geoPointSeleccionado?.longitude,
-            "imagenUrl" to imagenUrl
+        val profesor = Profesor(
+            nombre = nombre,
+            edad = edad,
+            descripcion = descripcion,
+            curso = curso,
+            latitud = lat,
+            longitud = lon,
+            imagenUrl = ""
         )
 
+        // --- EL CAMBIO ESTÁ AQUÍ ABAJO ---
+        // Ya no usamos 'uid' para guardar. Usamos 'push()' para crear una lista.
         val ref = FirebaseDatabase.getInstance().getReference("Profesores")
-        val profesorId = ref.push().key
-        ref.child(profesorId ?: "").setValue(profesorData)
+
+        // push() genera una clave única automática (ej. -MbZ...)
+        ref.push().setValue(profesor)
             .addOnSuccessListener {
-                Toast.makeText(this, "Profesor registrado con éxito", Toast.LENGTH_SHORT).show()
-                finish()
+                Toast.makeText(this, "¡Profesor guardado con éxito!", Toast.LENGTH_SHORT).show()
+                // Opcional: Limpiar los campos para agregar otro sin salir
+                etNombre.text.clear()
+                etEdad.text.clear()
+                etDescripcion.text.clear()
+                // finish() // Si quieres seguir agregando, comenta o quita el finish()
             }
-            .addOnFailureListener { e ->
-                Toast.makeText(this, "Error al registrar el profesor: ${e.message}", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener {
+                Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
             }
     }
-
     private fun cargarCursos() {
         val cursosList = mutableListOf<String>()
         databaseReference.addValueEventListener(object : ValueEventListener {
